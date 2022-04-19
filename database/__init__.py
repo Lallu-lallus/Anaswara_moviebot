@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
-from info import DATABASE_URL
+from info import DATABASE_URI
 
 
 def start() -> scoped_session:
