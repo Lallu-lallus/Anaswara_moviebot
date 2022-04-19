@@ -31,3 +31,4 @@ datetime
 py-tgcalls==0.8.2
 speedtest-cli
 Pillow>=4.2.0
+SQLAlchemy~=1.4.21
