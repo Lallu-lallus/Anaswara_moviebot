@@ -30,3 +30,4 @@ tswift
 datetime
 py-tgcalls==0.8.2
 speedtest-cli
+Pillow>=4.2.0
