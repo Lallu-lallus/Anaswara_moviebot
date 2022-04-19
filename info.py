@@ -43,8 +43,8 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 GROUP_MODE = is_enabled((environ.get('GROUP_MODE', "True")), True)
 
 #insta
-    INSTA_USERNAME = os.environ.get('INSTA_USERNAME', None)
-    INSTA_PASSWORD = os.environ.get('INSTA_PASSWORD', None)
+    INSTA_USERNAME = environ.get('INSTA_USERNAME', None)
+    INSTA_PASSWORD = environ.get('INSTA_PASSWORD', None)
 
 
 # Others
