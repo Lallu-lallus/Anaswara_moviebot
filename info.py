@@ -1,7 +1,14 @@
 import re
 from os import environ
+from logging import WARNING, getLogger
 from pytgcalls import PyTgCalls
 from pyrogram import Client, filters
+
+env_file = f"{getcwd()}/.env"
+info = Configuration(loaders=[Environment(), EnvFile(filename=env_file)])
+
+getLogger("pyrogram").setLevel(WARNING)
+LOGGER = getLogger(__name__)
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
