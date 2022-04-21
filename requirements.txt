@@ -32,3 +32,5 @@ speedtest
 pillow
 Pytz
 cachetools
+shazamio
+datetime
