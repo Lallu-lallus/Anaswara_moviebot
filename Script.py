@@ -4,6 +4,13 @@ class script(object):
 """
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝘏𝘦𝘳𝘦 𝘐𝘴 𝘛𝘩𝘦 𝘏𝘦𝘭𝘱 𝘍𝘰𝘳 𝘔𝘺 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴."""
+    FONT_TXT = """Hey {}
+It is the stylish text creator 
+Eg: /font (ur message)"""
+    CARBON_TXT= """HEY {}
+It is carbon creator
+Commands
+/Carbon - reply to a message"""
     ABOUT_TXT = """
 This Anaswara's About msg
 ✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵
