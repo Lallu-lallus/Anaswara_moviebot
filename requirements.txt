@@ -31,3 +31,4 @@ prettyconf
 speedtest
 pillow
 Pytz
+cachetools
