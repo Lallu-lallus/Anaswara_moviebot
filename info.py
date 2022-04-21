@@ -48,7 +48,6 @@ SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
-DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID")
 IS_PRIVATE = os.environ.get("IS_PRIVATE",False)
 UNAUTHORIZED_CALLBACK_TEXT = (environ.get('UNAUTHORIZED_CALLBACK_TEXT', "oKda"))[:200]
 REDIRECT_TO = (environ.get('REDIRECT_TO', 0))
