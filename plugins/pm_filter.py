@@ -535,7 +535,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "help":
+    elif query.data == "func":
         buttons = [[
             InlineKeyboardButton(' ♀️ ᴀᴅᴍɪɴ ♀️ ', callback_data='admin'),
             InlineKeyboardButton(' ⭕ ᴄᴏɴɴᴇᴄᴛ ⭕ ', callback_data='coct'),
@@ -575,17 +575,41 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "help"
+        buttons= [[
+            InlineKeyboardButton('💠𝘔𝘢𝘯𝘶𝘦𝘭 𝘧𝘪𝘭𝘵𝘦𝘳💠', callback_data= 'manualfilter'),
+            InlineKeyboardButton('💠𝘈𝘶𝘵𝘰 𝘧𝘪𝘭𝘵𝘦𝘳💠', callback_data= 'autofilter')
+            ],[
+            InlineKeyboardButton('♻️𝘏𝘦𝘭𝘱 𝘍𝘶𝘯𝘤𝘵𝘪𝘰𝘯𝘴♻️', callback_data= 'func')
+            ],[
+            InlineKeyboardButton('💠𝘍𝘰𝘯𝘵💠', callback_data= 'font'),
+            InlineKeyboardButton('💠𝘊𝘢𝘳𝘣𝘰𝘯💠', callback_data= 'carbon')
+            ],[
+            InlineKeyboardButton('♻️𝘉𝘢𝘤𝘬♻️', callback_data= 'start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        m=await query.message.reply_text("▣▢▢")
+        n=await m.edit("▣▣▢")
+        o=await n.edit("▣▣▣")
+        await asyncio.sleep(1)
+        await o.delete()
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('⭕sᴛᴀᴛᴜs⭕', callback_data='stats'),
+            InlineKeyboardButton('💠sᴛᴀᴛᴜs💠', callback_data='stats'),
             InlineKeyboardButton('💠sᴏᴜʀᴄᴇ💠', callback_data='source')
             ],[
-            InlineKeyboardButton('⛔sᴇᴀʀᴄʜ⛔', switch_inline_query_current_chat='')
+            InlineKeyboardButton('♻️sᴇᴀʀᴄʜ♻️', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('🛑ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs🛑', callback_data='help')
+            InlineKeyboardButton('♻️ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs♻️', callback_data='help')
             ],[
-            InlineKeyboardButton('❗ʙᴀᴄᴋ❗', callback_data='start'),
-            InlineKeyboardButton('❌ᴄʟᴏsᴇ❌', callback_data='close_data')
+            InlineKeyboardButton('💠ʙᴀᴄk💠', callback_data='start'),
+            InlineKeyboardButton('💠ᴄʟᴏsᴇ💠', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await query.message.reply_text("▣▢▢")
@@ -611,6 +635,38 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await o.delete()
         await query.message.edit_text(
             text=script.ALIVE_TXT,
+            reply_markup=reply_markup,
+
+parse_mode='html'
+        )
+    elif query.data == "font":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        m=await query.message.reply_text("▣▢▢")
+        n=await m.edit("▣▣▢")
+        o=await n.edit("▣▣▣")
+        await asyncio.sleep(1)
+        await o.delete()
+        await query.message.edit_text(
+            text=script.FONT_TXT,
+            reply_markup=reply_markup,
+
+parse_mode='html'
+        )
+    elif query.data == "carbon":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        m=await query.message.reply_text("▣▢▢")
+        n=await m.edit("▣▣▢")
+        o=await n.edit("▣▣▣")
+        await asyncio.sleep(1)
+        await o.delete()
+        await query.message.edit_text(
+            text=script.CARBON_TXT,
             reply_markup=reply_markup,
 
 parse_mode='html'
