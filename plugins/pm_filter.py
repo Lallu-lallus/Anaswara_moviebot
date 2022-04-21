@@ -537,31 +537,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "func":
         buttons = [[
-            InlineKeyboardButton(' ♀️ ᴀᴅᴍɪɴ ♀️ ', callback_data='admin'),
-            InlineKeyboardButton(' ⭕ ᴄᴏɴɴᴇᴄᴛ ⭕ ', callback_data='coct'),
-            InlineKeyboardButton(' ⚧️ ғɪʟᴛᴇʀs ⚧️ ', callback_data='auto_manual')
+            InlineKeyboardButton('  ᴀᴅᴍɪɴ  ', callback_data='admin'),
+            InlineKeyboardButton('  ᴄᴏɴɴᴇᴄᴛ  ', callback_data='coct'),
+            InlineKeyboardButton('  ғɪʟᴛᴇʀs  ', callback_data='auto_manual')
             ],[
-            InlineKeyboardButton(' 🚫 ɢᴛʀᴀɴs 🚫 ', callback_data='gtrans'),
-            InlineKeyboardButton(' ❗ ɪɴғᴏ ❗ ', callback_data='info'),
-            InlineKeyboardButton(' ❕ ᴘᴀsᴛᴇ ❕ ', callback_data='paste')
+            InlineKeyboardButton('  ɢᴛʀᴀɴs  ', callback_data='gtrans'),
+            InlineKeyboardButton('  ɪɴғᴏ  ', callback_data='info'),
+            InlineKeyboardButton('  ᴘᴀsᴛᴇ  ', callback_data='paste')
             ],[
-            InlineKeyboardButton(' ⛔ ᴘᴜʀɢᴇ ⛔ ', callback_data='purge'),
-            InlineKeyboardButton(' 📵 ʀᴇsᴛʀɪᴄᴛ 📵 ', callback_data='restric'),
-            InlineKeyboardButton(' ✴️ sᴇᴀʀᴄʜ ✴️ ', callback_data='search')
-            ],[
-            InlineKeyboardButton(' 🔶 ᴛᴇʟᴇɢʀᴀᴘʜ 🔶 ', callback_data='tgraph'),
-            InlineKeyboardButton(' 🔆 ᴡʜᴏɪs 🔆 ', callback_data='whois'),
-            InlineKeyboardButton(' 〽️ ғᴜɴ 〽️ ', callback_data='fun')
-            ],[
-            InlineKeyboardButton(' ❓ ᴀʟɪᴠᴇ ❓ ', callback_data='alive'),
-            InlineKeyboardButton(' ⚜️ sᴏɴɢ ⚜️ ', callback_data='song'),
-            InlineKeyboardButton(' 🔸 ᴊsᴏɴ 🔸 ', callback_data='json')
-            ],[
-            InlineKeyboardButton(' ☣️ ᴘɪɴ ☣️ ', callback_data='pin'),
-            InlineKeyboardButton(' ❇️ ᴄᴏʀᴏɴᴀ ✳️ ', callback_data='corona'),
-            InlineKeyboardButton(' ♻️ sᴛɪᴄᴋᴇʀɪᴅ ♻️ ', callback_data='stickerid')
-            ],[
-            InlineKeyboardButton(' 🔱 ʙᴀᴄᴋ 🔱', callback_data='start')
+            InlineKeyboardButton(' 𝙉𝙚𝙭𝙩☞ﾟヮﾟ☞', callback_data='s')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await query.message.reply_text("▣▢▢")
@@ -569,6 +553,46 @@ async def cb_handler(client: Client, query: CallbackQuery):
         o=await n.edit("▣▣▣")
         await asyncio.sleep(1)
         await o.delete()
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "s":
+        buttons = [[
+            InlineKeyboardButton('  ᴘᴜʀɢᴇ  ', callback_data='purge'),
+            InlineKeyboardButton('  ʀᴇsᴛʀɪᴄᴛ  ', callback_data='restric'),
+            InlineKeyboardButton('  sᴇᴀʀᴄʜ  ', callback_data='search')
+            ],[
+            InlineKeyboardButton('  ᴛᴇʟᴇɢʀᴀᴘʜ  ', callback_data='tgraph'),
+            InlineKeyboardButton('  ᴡʜᴏɪs  ', callback_data='whois'),
+            InlineKeyboardButton('  ғᴜɴ  ', callback_data='fun')
+            ],[
+            InlineKeyboardButton(' ☜ ↼_↼𝘽𝙖𝙘𝙠 ', callback_data='func'),
+            InlineKeyboardButton(' 𝙉𝙚𝙭𝙩☞ﾟヮﾟ☞', callback_data='p')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "s":
+        buttons = [[
+            InlineKeyboardButton('  ᴀʟɪᴠᴇ  ', callback_data='alive'),
+            InlineKeyboardButton('  sᴏɴɢ  ', callback_data='song'),
+            InlineKeyboardButton('  ᴊsᴏɴ  ', callback_data='json')
+            ],[
+            InlineKeyboardButton('  ᴘɪɴ  ', callback_data='pin'),
+            InlineKeyboardButton('  ᴄᴏʀᴏɴᴀ  ', callback_data='corona'),
+            InlineKeyboardButton('  sᴛɪᴄᴋᴇʀɪᴅ  ', callback_data='stickerid')
+            ],[
+            InlineKeyboardButton(' ☜ ↼_↼𝘽𝙖𝙘𝙠 ', callback_data='func'),
+            InlineKeyboardButton(' 𝙉𝙚𝙭𝙩☞ﾟヮﾟ☞', callback_data='func')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
