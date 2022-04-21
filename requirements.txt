@@ -28,3 +28,4 @@ pyromod
 yt_dlp
 tswift
 prettyconf
+speedtest
