@@ -32,10 +32,6 @@ def redirected_env(value):
         return 'Chat'
 
 
-
-env_file = f"{getcwd()}/.env"
-info = Configuration(loaders=[Environment(), EnvFile(filename=env_file)])
-
 getLogger("pyrogram").setLevel(WARNING)
 LOGGER = getLogger(__name__)
 
