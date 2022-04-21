@@ -545,6 +545,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('  ɪɴғᴏ  ', callback_data='info'),
             InlineKeyboardButton('  ᴘᴀsᴛᴇ  ', callback_data='paste')
             ],[
+            InlineKeyboardButton(' ☜ ↼_↼𝘽𝙖𝙘𝙠 ', callback_data='help'),
             InlineKeyboardButton(' 𝙉𝙚𝙭𝙩☞ﾟヮﾟ☞', callback_data='s')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
