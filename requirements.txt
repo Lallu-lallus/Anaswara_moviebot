@@ -43,7 +43,6 @@ python-arq
 ffmpeg-python
 ytthumb
 tswift
-pyromod==1.5
 wget
 psutil
 wheel
