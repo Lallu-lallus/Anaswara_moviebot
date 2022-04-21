@@ -1,5 +1,5 @@
 from os import getcwd
-import os
+
 
 
 
@@ -10,7 +10,6 @@ from logging import WARNING, getLogger
 from prettyconf.loaders import EnvFile, Environment
 
 from asyncio.log import logger
-import re
 from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
