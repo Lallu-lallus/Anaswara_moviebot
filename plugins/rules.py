@@ -7,7 +7,7 @@ from database.rules_db import Rules
 from Anaswara.tr_engine import tlang
 from Anaswara.utils.custom_filters import admin_filter, command
 from Anaswara.utils.kbhelpers import ikb
-from Anaswara.vars import Config
+from info import Config
 
 
 @Alita.on_message(command("rules") & filters.group)
