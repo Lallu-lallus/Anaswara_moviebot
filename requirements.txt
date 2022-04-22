@@ -34,3 +34,4 @@ Pytz
 cachetools
 shazamio
 datetime
+cachetools
