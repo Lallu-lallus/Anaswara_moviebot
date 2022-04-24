@@ -36,16 +36,11 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [[
+                buttons = [[
             InlineKeyboardButton('♻️ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴘ♻️', url='https://t.me/anaswaramovie_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('💠sᴇᴀʀᴄʜ💠', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('💠sᴜᴘᴘᴏʀᴛ💠', url='https://t.me/EDIT_REPO')
-            ],[
-            InlineKeyboardButton('♻️ᴀᴅᴍɪɴ♻️', url='https://t.me/Lallu_tg')
-            ],[
             InlineKeyboardButton('💠ʜᴇʟᴘ💠', callback_data='help'),
-            InlineKeyboardButton('💠ᴀʙᴏᴜᴛ💠', callback_data='about')
+            InlineKeyboardButton('💠sᴇᴀʀᴄʜ💠', switch_inline_query_current_chat='')
             ],[
             InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
         ]]
@@ -85,22 +80,17 @@ async def start(client, message):
             )
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
+                buttons = [[
             InlineKeyboardButton('♻️ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴘ♻️', url='https://t.me/anaswaramovie_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('💠sᴇᴀʀᴄʜ💠', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('💠sᴜᴘᴘᴏʀᴛ💠', url='https://t.me/EDIT_REPO')
-            ],[
-            InlineKeyboardButton('♻️ᴀᴅᴍɪɴ♻️', url='https://t.me/Lallu_tg')
-            ],[
             InlineKeyboardButton('💠ʜᴇʟᴘ💠', callback_data='help'),
-            InlineKeyboardButton('💠ᴀʙᴏᴜᴛ💠', callback_data='about')
+            InlineKeyboardButton('💠sᴇᴀʀᴄʜ💠', switch_inline_query_current_chat='')
             ],[
             InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.send_message(
-            message=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        await message.reply_text(
+            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
