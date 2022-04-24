@@ -525,11 +525,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            parse_mode='html'
+        await client.send_sticker(
+            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup
+            #parse_mode='html'
         )
     elif query.data == "func":
         await query.message.delete()
@@ -546,11 +546,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(' 𝙉𝙚𝙭𝙩☞ﾟヮﾟ☞', callback_data='s')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            parse_mode='html'
+        await client.send_sticker(
+            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup
+            #parse_mode='html'
         )
     elif query.data == "s":
         buttons = [[
@@ -606,11 +606,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('♻️𝘉𝘢𝘤𝘬♻️', callback_data= 'start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            parse_mode='html'
+        await client.send_sticker(
+            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup
+            #parse_mode='html'
         )
     elif query.data == "about":
         await query.message.delete()
@@ -626,11 +626,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('💠ᴄʟᴏsᴇ💠', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            parse_mode='html'
+        await client.send_sticker(
+            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup
+            #parse_mode='html'
         )
     elif query.data == "alive":
         await query.message.delete()
