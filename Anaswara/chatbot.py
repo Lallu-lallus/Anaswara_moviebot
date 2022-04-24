@@ -3,7 +3,7 @@ from asyncio import gather, sleep
 from pyrogram import filters
 from pyrogram.types import Message
 
-from wbb import (
+from Answara import (
     BOT_ID,
     SUDOERS,
     USERBOT_ID,
