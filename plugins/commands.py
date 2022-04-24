@@ -46,7 +46,7 @@ async def start(client, message):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_sticker(
-            sticker="CAACAgIAAxkBAAEPcSFiZMMY8fSOr3Fzf7iyeTmUvVKu6gAChxUAAj0PUEnem2b91sejvyQE",
+            sticker="CAACAgIAAxkBAAIIE2JlKpoSbNeerLeZ3Gj3QW6Yx0mVAALTBwACRvusBP-3rWmWskNmHgQ",
            # caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
             #parse_mode='html'
@@ -86,7 +86,7 @@ async def start(client, message):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_sticker(
-            sticker="CAACAgIAAxkBAAEPcSFiZMMY8fSOr3Fzf7iyeTmUvVKu6gAChxUAAj0PUEnem2b91sejvyQE",
+            sticker="CAACAgIAAxkBAAIIE2JlKpoSbNeerLeZ3Gj3QW6Yx0mVAALTBwACRvusBP-3rWmWskNmHgQ",
            # caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
             #parse_mode='html'
