@@ -555,6 +555,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "s":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('  ᴘᴜʀɢᴇ  ', callback_data='purge'),
             InlineKeyboardButton('  ʀᴇsᴛʀɪᴄᴛ  ', callback_data='restric'),
@@ -576,6 +577,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "p":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('  ᴀʟɪᴠᴇ  ', callback_data='alive'),
             InlineKeyboardButton('  sᴏɴɢ  ', callback_data='song'),
@@ -643,6 +645,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "font":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -655,6 +658,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "carbon":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -667,6 +671,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "whois":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -679,6 +684,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "source":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='about')
         ]]
@@ -691,6 +697,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "corona":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -703,6 +710,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "stickerid":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -715,6 +723,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "song":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -727,6 +736,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "manualfilter":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='auto_manual'),
             InlineKeyboardButton('Buttons »', callback_data='button')
@@ -740,6 +750,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "json":
+        await query.message.delete()
         buttons = [[ 
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -752,6 +763,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "pin":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -764,6 +776,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "button":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='manualfilter')
         ]]
@@ -776,6 +789,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "autofilter":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='auto_manual')
         ]]
@@ -788,6 +802,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "auto_manual":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('auto', callback_data='autofilter'),
             InlineKeyboardButton('manual', callback_data='manualfilter')
@@ -804,6 +819,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "fun":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='func')
         ]]
@@ -816,6 +832,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "coct":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -828,6 +845,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "paste":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help'),
             InlineKeyboardButton('Close ✗', callback_data='close_data')
@@ -841,6 +859,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "tgraph":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -853,6 +872,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "info":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -865,6 +885,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "search":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -877,6 +898,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "gtrans":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help'),
             InlineKeyboardButton('lang codes', url='https://cloud.google.com/translate/docs/languages')
@@ -890,6 +912,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "admin":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -902,6 +925,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "zombies":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -914,6 +938,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "purge":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -926,6 +951,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "restric":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
@@ -938,6 +964,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "stats":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='about'),
             InlineKeyboardButton('Refresh ⧖', callback_data='rfrsh')
