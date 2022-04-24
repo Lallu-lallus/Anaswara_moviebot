@@ -555,7 +555,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "s":
-        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('  ᴘᴜʀɢᴇ  ', callback_data='purge'),
             InlineKeyboardButton('  ʀᴇsᴛʀɪᴄᴛ  ', callback_data='restric'),
@@ -577,7 +576,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "p":
-        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('  ᴀʟɪᴠᴇ  ', callback_data='alive'),
             InlineKeyboardButton('  sᴏɴɢ  ', callback_data='song'),
