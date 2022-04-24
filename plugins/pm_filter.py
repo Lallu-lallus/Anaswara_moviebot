@@ -614,11 +614,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         await query.message.delete()
         buttons= [[
-            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
-            InlineKeyboardButton('sᴏᴜʀᴄᴇ', callback_data='source')
+            InlineKeyboardButton('𝐬𝐭𝐚𝐭𝐮𝐬', callback_data='stats'),
+            InlineKeyboardButton('𝐬𝐨𝐮𝐫𝐜𝐞', callback_data='source')
             ],[
-            InlineKeyboardButton('ʙᴀᴄk', callback_data='start'),
-            InlineKeyboardButton('💠ᴄʟᴏsᴇ', callback_data='close_data')
+            InlineKeyboardButton('𝐁𝐚𝐜𝐤', callback_data='start'),
+            InlineKeyboardButton('𝐂𝐥𝐨𝐬𝐞', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(
