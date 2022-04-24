@@ -45,15 +45,11 @@ async def start(client, message):
             InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_chat_action("typing")
-        m=await message.reply_sticker("CAACAgUAAxkBAAPLYhmLeQjtiqPZJEHOFh4KFOjbWzcAAvgDAAKfRIlXnd2oxpsLJeYeBA")
-        await asyncio.sleep(1)
-        await m.delete()
-        await message.reply_chat_action("typing")
-        await message.reply_text(
-            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html'
+        await client.send_sticker(
+            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup
+            #parse_mode='html'
         )
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
@@ -89,10 +85,12 @@ async def start(client, message):
             InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(
-            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html'
+        await client.send_sticker(
+            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup
+            #parse_mode='html'
+        )
         )
         return
     file_id = message.command[1]
