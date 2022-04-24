@@ -515,6 +515,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('♻️ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴘ♻️', url='https://t.me/anaswaramovie_bot?startgroup=true')
             ],[
@@ -531,6 +532,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "func":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('  ᴀᴅᴍɪɴ  ', callback_data='admin'),
             InlineKeyboardButton('  ᴄᴏɴɴᴇᴄᴛ  ', callback_data='coct'),
@@ -544,11 +546,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(' 𝙉𝙚𝙭𝙩☞ﾟヮﾟ☞', callback_data='s')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
@@ -596,6 +593,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "help":
+        await query.message.delete()
         buttons= [[
             InlineKeyboardButton('💠𝘔𝘢𝘯𝘶𝘦𝘭 𝘧𝘪𝘭𝘵𝘦𝘳💠', callback_data= 'manualfilter'),
             InlineKeyboardButton('💠𝘈𝘶𝘵𝘰 𝘧𝘪𝘭𝘵𝘦𝘳💠', callback_data= 'autofilter')
@@ -608,11 +606,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('♻️𝘉𝘢𝘤𝘬♻️', callback_data= 'start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
@@ -620,6 +613,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "about":
+        await query.message.delete()
         buttons= [[
             InlineKeyboardButton('💠sᴛᴀᴛᴜs💠', callback_data='stats'),
             InlineKeyboardButton('💠sᴏᴜʀᴄᴇ💠', callback_data='source')
@@ -632,11 +626,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('💠ᴄʟᴏsᴇ💠', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             disable_web_page_preview=True,
@@ -644,6 +633,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "alive":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
@@ -660,15 +650,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 parse_mode='html'
         )
     elif query.data == "font":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
         await query.message.edit_text(
             text=script.FONT_TXT,
             reply_markup=reply_markup,
@@ -676,15 +662,11 @@ parse_mode='html'
 parse_mode='html'
         )
     elif query.data == "carbon":
+        await query.message.delete()
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
         await query.message.edit_text(
             text=script.CARBON_TXT,
             reply_markup=reply_markup,
