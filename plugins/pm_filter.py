@@ -547,11 +547,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(' 𝙉𝙚𝙭𝙩☞ﾟヮﾟ☞', callback_data='s')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(
-            sticker="CAACAgIAAxkBAAIIWWJlSsEy1tUbO8NtmaVeTx2_fpm5AAJrBQACP5XMCp6Ix3B6TnsTHgQ",
+        await client.send_message(
+            text=script.HELP_TXT.format(query.from_user.mention),
             chat_id=query.message.chat.id,
-            reply_markup=reply_markup
-            #parse_mode='html'
+            reply_markup=reply_markup,
+            disable_web_page_preview=True,
+            parse_mode='html'
         )
     elif query.data == "s":
         buttons = [[
