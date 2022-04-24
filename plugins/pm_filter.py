@@ -668,7 +668,7 @@ parse_mode='html'
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
+        await query.message.send_message(
             text=script.CARBON_TXT,
             chat_id=query.message.chat.id,
             reply_markup=reply_markup,
