@@ -49,7 +49,7 @@ async def chat_bot_toggle(db, message: Message):
 # Enabled | Disable Chatbot
 
 
-@client.on_message(filters.command("chatbot") & ~filters.edited)
+@Client.on_message(filters.command("chatbot") & ~filters.edited)
 @capture_err
 async def chatbot_status(_, message: Message):
     if len(message.command) != 2:
@@ -72,7 +72,7 @@ async def type_and_send(message: Message):
     await message._client.send_chat_action(chat_id, "cancel")
 
 
-@app.on_message(
+@Client.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -97,7 +97,7 @@ async def chatbot_talk(_, message: Message):
 # FOR USERBOT
 
 
-@app2.on_message(
+@Client.on_message(
     filters.command("chatbot", prefixes=USERBOT_PREFIX)
     & ~filters.edited
     & SUDOERS
@@ -109,7 +109,7 @@ async def chatbot_status_ubot(_, message: Message):
     await chat_bot_toggle(active_chats_ubot, message)
 
 
-@app2.on_message(
+@Client.on_message(
     ~filters.me & ~filters.private & filters.text & ~filters.edited,
     group=chatbot_group,
 )
@@ -132,7 +132,7 @@ async def chatbot_talk_ubot(_, message: Message):
     await type_and_send(message)
 
 
-@app2.on_message(
+@Client.on_message(
     filters.text & filters.private & ~filters.me & ~filters.edited,
     group=(chatbot_group + 1),
 )
