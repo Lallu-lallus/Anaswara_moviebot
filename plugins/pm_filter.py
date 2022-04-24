@@ -657,6 +657,7 @@ parse_mode='html'
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.FONT_TXT,
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
 
 parse_mode='html'
@@ -669,6 +670,7 @@ parse_mode='html'
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.CARBON_TXT,
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
 
 parse_mode='html'
