@@ -37,12 +37,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('♻️ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴘ♻️', url='https://t.me/anaswaramovie_bot?startgroup=true')
+            InlineKeyboardButton('𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐔𝐫 𝐆𝐫𝐩', url='https://t.me/anaswaramovie_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('💠ʜᴇʟᴘ💠', callback_data='help'),
-            InlineKeyboardButton('💠sᴇᴀʀᴄʜ💠', switch_inline_query_current_chat='')
+            InlineKeyboardButton('𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton('𝐒𝐞𝐚𝐫𝐜𝐡', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
+            InlineKeyboardButton('𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_sticker(
@@ -77,12 +77,12 @@ async def start(client, message):
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('♻️ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴘ♻️', url='https://t.me/anaswaramovie_bot?startgroup=true')
+            InlineKeyboardButton('𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐔𝐫 𝐆𝐫𝐩', url='https://t.me/anaswaramovie_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('💠ʜᴇʟᴘ💠', callback_data='help'),
-            InlineKeyboardButton('💠sᴇᴀʀᴄʜ💠', switch_inline_query_current_chat='')
+            InlineKeyboardButton('𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton('𝐒𝐞𝐚𝐫𝐜𝐡', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
+            InlineKeyboardButton('𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_sticker(
