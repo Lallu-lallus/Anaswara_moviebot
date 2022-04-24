@@ -45,9 +45,9 @@ async def start(client, message):
             InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(
-            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
-            chat_id=query.message.chat.id,
+        await message.reply_sticker(
+            sticker="CAACAgIAAxkBAAEPcSFiZMMY8fSOr3Fzf7iyeTmUvVKu6gAChxUAAj0PUEnem2b91sejvyQE",
+           # caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
             #parse_mode='html'
         )
@@ -85,12 +85,11 @@ async def start(client, message):
             InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(
-            sticker="CAACAgIAAxkBAAEPcSViZMN7TGhDGEEk0Hsf3do2NgUdPAACYhUAAiKjwUn70vs57W5IfiQE",
-            chat_id=query.message.chat.id,
+        await message.reply_sticker(
+            sticker="CAACAgIAAxkBAAEPcSFiZMMY8fSOr3Fzf7iyeTmUvVKu6gAChxUAAj0PUEnem2b91sejvyQE",
+           # caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
             #parse_mode='html'
-        )
         )
         return
     file_id = message.command[1]
