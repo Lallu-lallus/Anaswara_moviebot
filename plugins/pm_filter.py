@@ -597,12 +597,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         await query.message.delete()
         buttons= [[
-            InlineKeyboardButton('𝘔𝘢𝘯𝘶𝘦𝘭 𝘧𝘪𝘭𝘵𝘦𝘳', callback_data= 'manualfilter'),
-            InlineKeyboardButton('𝘈𝘶𝘵𝘰 𝘧𝘪𝘭𝘵𝘦𝘳', callback_data= 'autofilter')
+            InlineKeyboardButton('𝐌𝐚𝐧𝐮𝐞𝐥 𝐅𝐢𝐥𝐭𝐞𝐫', callback_data= 'manualfilter'),
+            InlineKeyboardButton('𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫', callback_data= 'autofilter')
             ],[
-            InlineKeyboardButton('𝘏𝘦𝘭𝘱 𝘍𝘶𝘯𝘤𝘵𝘪𝘰𝘯𝘴', callback_data= 'func')
+            InlineKeyboardButton('𝐇𝐞𝐥𝐩 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬', callback_data= 'func')
             ],[
-            InlineKeyboardButton('𝘉𝘢𝘤𝘬', callback_data= 'start')
+            InlineKeyboardButton('𝐁𝐚𝐜𝐤', callback_data= 'start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(
