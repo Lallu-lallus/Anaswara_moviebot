@@ -622,11 +622,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐂𝐥𝐨𝐬𝐞', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(
-            sticker="CAACAgIAAxkBAAIIWWJlSsEy1tUbO8NtmaVeTx2_fpm5AAJrBQACP5XMCp6Ix3B6TnsTHgQ",
+        await client.send_message(
+            text=script.ABOUT_TXT.format(query.from_user.mention),
             chat_id=query.message.chat.id,
-            reply_markup=reply_markup
-            #parse_mode='html'
+            reply_markup=reply_markup,
+            disable_web_page_preview=True,
+            parse_mode='html'
         )
     elif query.data == "alive":
         await query.message.delete()
@@ -634,54 +635,47 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.ALIVE_TXT,
+        await client.send_message(
+            text=script.ALIVE_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
-
-parse_mode='html'
+            disable_web_page_preview=True,
+            parse_mode='html'
         )
     elif query.data == "font":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.send_message(
-            text=script.FONT_TXT,
+        await client.send_message(
+            text=script.FONT_TXT.format(query.from_user.mention),
             chat_id=query.message.chat.id,
             reply_markup=reply_markup,
-
-parse_mode='html'
+            disable_web_page_preview=True,
+            parse_mode='html'
         )
     elif query.data == "carbon":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.send_message(
-            text=script.CARBON_TXT,
+        await client.send_message(
+            text=script.CARBON_TXT.format(query.from_user.mention),
             chat_id=query.message.chat.id,
             reply_markup=reply_markup,
-
-parse_mode='html'
+            disable_web_page_preview=True,
+            parse_mode='html'
         )
     elif query.data == "whois":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.WHOIS_TXT,
+        await client.send_message(
+            text=script.WHOIS_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "source":
@@ -689,15 +683,11 @@ parse_mode='html'
             InlineKeyboardButton('« Back', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.SOURCE_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.SOURCE_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "corona":
@@ -705,14 +695,11 @@ parse_mode='html'
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.CORONA_TXT,
+        await client.send_message(
+            text=script.CORONA_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "stickerid":
@@ -720,14 +707,11 @@ parse_mode='html'
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.STICKER_TXT,
+        await client.send_message(
+            text=script.STICKER_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "song":
@@ -735,14 +719,11 @@ parse_mode='html'
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.SONG_TXT,
+        await client.send_message(
+            text=script.SONG_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "manualfilter":
@@ -751,15 +732,11 @@ parse_mode='html'
             InlineKeyboardButton('Buttons »', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.MANUALFILTER_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.MANUALFILTER_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "json":
@@ -767,14 +744,11 @@ parse_mode='html'
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.JSON_TXT,
+        await client.send_message(
+            text=script.JSON_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "pin":
@@ -782,14 +756,11 @@ parse_mode='html'
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.PIN_TXT,
+        await client.send_message(
+            text=script.PIN_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "button":
@@ -797,15 +768,11 @@ parse_mode='html'
             InlineKeyboardButton('« Back', callback_data='manualfilter')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.BUTTON_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.BUTTON_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "autofilter":
@@ -813,68 +780,51 @@ parse_mode='html'
             InlineKeyboardButton('« Back', callback_data='auto_manual')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.AUTOFILTER_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.AUTOFILTER_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "auto_manual":
         buttons = [[
             InlineKeyboardButton('auto', callback_data='autofilter'),
-
-InlineKeyboardButton('manual', callback_data='manualfilter')
-
-],[
+            InlineKeyboardButton('manual', callback_data='manualfilter')
+            ],[
             InlineKeyboardButton('« Back', callback_data='help'),
             InlineKeyboardButton('Close ✗', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.AUTO_MANUAL_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.AUTO_MANUEL_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "fun":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='filter')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='func')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.FUN_TXT,
+        await client.send_message(
+            text=script.FUN_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
-        )         
+        )
     elif query.data == "coct":
         buttons = [[
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.CONNECTION_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.CONNCTION_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "paste":
@@ -883,15 +833,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('Close ✗', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.PASTE_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.PASTE_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "tgraph":
@@ -899,15 +845,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.TGRAPH_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.TGRAPH_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "info":
@@ -915,15 +857,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.INFO_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.INFO_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "search":
@@ -931,15 +869,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.SEARCH_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.SEARCH_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "gtrans":
@@ -948,15 +882,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('lang codes', url='https://cloud.google.com/translate/docs/languages')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.GTRANS_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.GTRANS_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "admin":
@@ -964,15 +894,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.ADMIN_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.ADMIN_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "zombies":
@@ -980,15 +906,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.ZOMBIES_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.ZOMBIES_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "purge":
@@ -996,15 +918,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.PURGE_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.PURGE_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "restric":
@@ -1012,15 +930,11 @@ InlineKeyboardButton('manual', callback_data='manualfilter')
             InlineKeyboardButton('« Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await query.message.reply_text("▣▢▢")
-        n=await m.edit("▣▣▢")
-        o=await n.edit("▣▣▣")
-        await asyncio.sleep(1)
-        await o.delete()
-        await query.message.edit_text(
-            text=script.RESTRIC_TXT,
-            disable_web_page_preview=True,
+        await client.send_message(
+            text=script.RESTRIC_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "stats":
