@@ -517,12 +517,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         await query.message.delete()
         buttons = [[
-            InlineKeyboardButton('♻️ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴘ♻️', url='https://t.me/anaswaramovie_bot?startgroup=true')
+            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴘ', url='https://t.me/anaswaramovie_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('💠ʜᴇʟᴘ💠', callback_data='help'),
-            InlineKeyboardButton('💠sᴇᴀʀᴄʜ💠', switch_inline_query_current_chat='')
+            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('sᴇᴀʀᴄʜ', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('♻️ᴄʟᴏsᴇ♻️', callback_data='close_data')
+            InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(
