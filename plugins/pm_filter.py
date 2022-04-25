@@ -525,7 +525,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker(
+        await client.reply_sticker(
             sticker=random.choice(MY_PIC),
             reply_markup=reply_markup
             #parse_mode='html'
@@ -604,7 +604,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐁𝐚𝐜𝐤', callback_data= 'start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker(
+        await client.reply_sticker(
             sticker=random.choice(MY_PIC),
             reply_markup=reply_markup
             #parse_mode='html'
