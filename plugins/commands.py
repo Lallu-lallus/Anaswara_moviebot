@@ -13,6 +13,27 @@ from utils import get_size, is_subscribed, temp
 
 logger = logging.getLogger(__name__)
 
+MY_PIC = ["CAACAgIAAxkBAAIJzWJmRB8BlK9Hr1fmr5L3YjcTybemAAJUFgAC0HtBSfy5WNnzRlYoHgQ",
+          "CAACAgIAAxkBAAIJz2JmRFB6q5QB-nzskiRu4a6OQtYFAAJEGQACCOHZSVKp6_XqghKoHgQ",
+          "CAACAgIAAxkBAAIJ0WJmRGW06tWK38t6FehI8zjvAqwwAAJ0GQAC_cTJSSusPcMW_Z-lHgQ",
+          "CAACAgIAAxkBAAIJ02JmRHnHrRNCDRKkN30I-9MnLdFjAAIpGAACE__ZSRXGCIP-uUsZHgQ",
+          "CAACAgIAAxkBAAIJ1WJmRPSMtNovBAI4OEaYRblMjuz2AAKrGAACnK7YSSsNbIPRhqCrHgQ",
+          "CAACAgIAAxkBAAIJ12JmRQgU5dFJ1zlWw9AcojUygNZEAAIxGAACHKzgSa63hlzSvPYgHgQ",
+          "CAACAgIAAxkBAAIJ2WJmRSi0lUZYK5ulASqHbbIvoJ9kAAKOFQACJU3BSY8WTX7r0TbzHgQ",
+          "CAACAgIAAxkBAAIJ22JmRT2kVdjTiDfQTqWR0FwfUUZCAALmFwAC8_aBSdRvya1MnMXRHgQ",
+          "CAACAgIAAxkBAAIJ3WJmRVOgbK-HSXUS5RRieWMiJ9EPAALgFgAC8uXhSepcBaMKpvocHgQ",
+          "CAACAgIAAxkBAAIJ32JmRW64ipODcXaqLVemUvBU5phAAALOGwACO3SBSoTI8zjsBQGuHgQ",
+          "CAACAgIAAxkBAAIJ4WJmRYCJd5g4eAJUtHUeorF_oTzAAAJcGgACS4PZSWp63xHDwoUyHgQ",
+          "CAACAgIAAxkBAAIJ42JmRZgUvdyWbPwToNDk9A8fH-sMAAI_GAACjI7JSb1MrpohVVXQHgQ",
+          "CAACAgIAAxkBAAIJ5WJmRbRMj7QgvJxPkJx6pZWKxWY0AAL2GgACTrcRSeXI9W89ePowHgQ",
+          "CAACAgIAAxkBAAIJ52JmRcTNw4xzyMYtOiW-D4AutbeFAAJkGAAC8bUQSZjj826eUmRrHgQ",
+          "CAACAgIAAxkBAAIJ6WJmRdMcYdG3RGUVlrhN-kioFmQcAALOFwAC6Y7gSUi1pSJ_Okp9HgQ",
+          "CAACAgIAAxkBAAIJ62JmReh47ERAAqaVelJuetpeL_R0AAL6FQACgb8QSU-cnfCjPKF6HgQ',
+          "CAACAgIAAxkBAAIJ7WJmRfm-XGIRuxmHaGdllyP_ct7YAAL0EwACB3UQSTqMZ6ks08xgHgQ",
+          "CAACAgIAAxkBAAIJ72JmRhACf4L7MkiInlGIAAHG5UnWYAAC9hoAAk63EUnlyPVvPXj6MB4E",
+          "CAACAgIAAxkBAAIJ8WJmRjoosRbHcQIvXttKxdiX35LYAAK6FQACmOXASWDPbIbSEH5gHgQ",
+          "CAACAgIAAxkBAAIJ82JmRoJKkiUwmGpS095Y8iZQXw_MAAJxAwACfvLFDJE5cyEs3k8bHgQ",
+
 @Client.on_message(filters.command("start"))
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
@@ -45,8 +66,8 @@ async def start(client, message):
             InlineKeyboardButton('𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker(
-            sticker="CAACAgIAAxkBAAIIV2JlSmdDZskMlSf26q1TberEvfDDAAJuBQACP5XMCoY62V2IvLc1HgQ",
+         await bot.reply_sticker(
+             sticker=random.choice(MY_PIC),
            # caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
             #parse_mode='html'
@@ -85,8 +106,8 @@ async def start(client, message):
             InlineKeyboardButton('𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker(
-            sticker="CAACAgIAAxkBAAIIV2JlSmdDZskMlSf26q1TberEvfDDAAJuBQACP5XMCoY62V2IvLc1HgQ",
+         await bot.reply_sticker(
+             sticker=random.choice(MY_PIC),
            # caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
             #parse_mode='html'
