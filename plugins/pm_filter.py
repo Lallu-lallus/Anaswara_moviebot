@@ -525,9 +525,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(
-            sticker="CAACAgIAAxkBAAIIV2JlSmdDZskMlSf26q1TberEvfDDAAJuBQACP5XMCoY62V2IvLc1HgQ",
-            chat_id=query.message.chat.id,
+        await message.reply_sticker(
+            sticker=random.choice(MY_PIC),
             reply_markup=reply_markup
             #parse_mode='html'
         )
@@ -551,7 +550,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.HELP_TXT.format(query.from_user.mention),
             chat_id=query.message.chat.id,
             reply_markup=reply_markup,
-            disable_web_page_preview=True,
             parse_mode='html'
         )
     elif query.data == "s":
@@ -606,9 +604,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐁𝐚𝐜𝐤', callback_data= 'start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(
-            sticker="CAACAgIAAxkBAAIIWWJlSsEy1tUbO8NtmaVeTx2_fpm5AAJrBQACP5XMCp6Ix3B6TnsTHgQ",
-            chat_id=query.message.chat.id,
+        await message.reply_sticker(
+            sticker=random.choice(MY_PIC),
             reply_markup=reply_markup
             #parse_mode='html'
         )
