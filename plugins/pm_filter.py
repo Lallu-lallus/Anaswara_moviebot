@@ -551,7 +551,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.HELP_TXT.format(query.from_user.mention),
             chat_id=query.message.chat.id,
             reply_markup=reply_markup,
-            parse_mode='html'
+           # parse_mode='html'
         )
     elif query.data == "s":
         buttons = [[
@@ -609,7 +609,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             sticker="CAACAgIAAxkBAAIJ6WJmRdMcYdG3RGUVlrhN-kioFmQcAALOFwAC6Y7gSUi1pSJ_Okp9HgQ",
             chat_id=query.message.chat.id,
             reply_markup=reply_markup,
-            parse_mode='html'
+            # parse_mode='html'
         )
     elif query.data == "about":
         await query.message.delete()
