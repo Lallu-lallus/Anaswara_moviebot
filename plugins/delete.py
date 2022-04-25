@@ -42,7 +42,7 @@ async def del_msg(app, message: Message):
 				
 				
 	else: 
-		await message.reply("This command is not for you")
+		await message.reply("𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐝𝐞𝐥𝐞𝐭𝐞𝐝 𝐭𝐡𝐢𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 ◉‿◉")
       
 
       	
