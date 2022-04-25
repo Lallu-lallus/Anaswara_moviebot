@@ -32,7 +32,8 @@ MY_PIC = ["CAACAgIAAxkBAAIJzWJmRB8BlK9Hr1fmr5L3YjcTybemAAJUFgAC0HtBSfy5WNnzRlYoH
           "CAACAgIAAxkBAAIJ7WJmRfm-XGIRuxmHaGdllyP_ct7YAAL0EwACB3UQSTqMZ6ks08xgHgQ",
           "CAACAgIAAxkBAAIJ72JmRhACf4L7MkiInlGIAAHG5UnWYAAC9hoAAk63EUnlyPVvPXj6MB4E",
           "CAACAgIAAxkBAAIJ8WJmRjoosRbHcQIvXttKxdiX35LYAAK6FQACmOXASWDPbIbSEH5gHgQ",
-          "CAACAgIAAxkBAAIJ82JmRoJKkiUwmGpS095Y8iZQXw_MAAJxAwACfvLFDJE5cyEs3k8bHgQ",
+          "CAACAgIAAxkBAAIJ82JmRoJKkiUwmGpS095Y8iZQXw_MAAJxAwACfvLFDJE5cyEs3k8bHgQ"
+]     
 
 @Client.on_message(filters.command("start"))
 async def start(client, message):
