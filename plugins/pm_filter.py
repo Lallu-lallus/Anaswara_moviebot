@@ -160,19 +160,19 @@ async def fil_mod(client, message):
       try:
          args = message.text.split(None, 1)[1].lower()
       except:
-         return await message.reply("Vro command is incomplete🥲.")
+         return await message.reply("Command is incomplete.")
 
-      m = await message.reply("🚀Processing...")
+      m = await message.reply("Processing...")
 
       if args in mode_on:
           FILTER_MODE[str(message.chat.id)] = "True"
-          await m.edit("Auto filter enabled for this chat🎉")
+          await m.edit("Auto filter enabled for this chat")
 
       elif args in mode_of:
           FILTER_MODE[str(message.chat.id)] = "False"
-          await m.edit("Auto filter disabled for this chat😴")
+          await m.edit("Auto filter disabled for this chat")
       else:
-          await m.edit("Use: `/autofilter on` or `/autofilter off🥀`")
+          await m.edit("Use: `/autofilter on` or `/autofilter off`")
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
