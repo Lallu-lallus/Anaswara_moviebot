@@ -29,9 +29,7 @@ This Anaswara's About msg
 ♻️𝐌𝐲 𝐒𝐞𝐫𝐯𝐞𝐫: 𝐎𝐤𝐓𝐞𝐓𝐨
 """
     SOURCE_TXT = """<b>NOTE:</b>
-- 𝑰 𝒂𝒎  𝒂 𝒐𝒑𝒆𝒏 𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒓𝒐𝒋𝒆𝒄𝒕. 
-- ՏOᑌᖇᑕᗴ ᑕOᗪᗴ - <a href="https://github.com/Lallu-lallus/AnnaBen_robot"> 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 </a>
-
+- 𝑨𝒎 𝑵𝒐𝒕 𝑨 𝑶𝒑𝒆𝒏 𝑺𝒐𝒖𝒓𝒄𝒆 𝑷𝒓𝒐𝒋𝒆𝒄𝒕
 𝗠𝗔𝗦𝗧𝗘𝗥:
 <a href="https://t.me/team_annaben"> 𝑻𝑬𝑨𝑴 𝑨𝑵𝑵𝑨 </a>"""
     WHOIS_TXT ="""<b>WHOIS MODULE</b>
