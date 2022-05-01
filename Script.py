@@ -9,7 +9,7 @@ class script(object):
 ♻️𝐌𝐲 𝐒𝐞𝐫𝐯𝐞𝐫: 𝐎𝐤𝐓𝐞𝐓𝐨
 """
     HELP_TXT = """𝙷𝙴𝚈 {}
-𝘏𝘦𝘳𝘦 𝘐𝘴 𝘛𝘩𝘦 𝘏𝘦𝘭𝘱 𝘍𝘰𝘳 𝘔𝘺 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴."""
+𝐇𝐞𝐫𝐞 𝐈𝐬 𝐓𝐡𝐞 𝐇𝐞𝐥𝐩 𝐅𝐨𝐫 𝐌𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬."""
     FONT_TXT = """Hey {}
 It is the stylish text creator 
 Eg: /font (ur message)"""
@@ -32,14 +32,14 @@ Commands
 𝗠𝗔𝗦𝗧𝗘𝗥:
 <a href="https://t.me/team_annaben"> 𝑻𝑬𝑨𝑴 𝑨𝑵𝑵𝑨 </a>"""
     WHOIS_TXT ="""<b>WHOIS MODULE</b>
-Note:- Give a user details
+Note:- 𝐠𝐢𝐯𝐞 𝐚 𝐮𝐬𝐞𝐫 𝐝𝐞𝐭𝐚𝐢𝐥𝐬
 
-•/whois :-give a user full details"""
+•/whois :-𝐠𝐢𝐯𝐞 𝐚 𝐮𝐬𝐞𝐫 𝐟𝐮𝐥𝐥 𝐝𝐞𝐭𝐚𝐢𝐥𝐬"""
     ALIVE_TXT ="""<b>ALIVE MODULE</b>
-• /alive - check me alive or dead🤧
-Just for a rasam😂"""
-    CORONA_TXT ="""<b>Here is the help for the coron information module</b>
-➡️ /covid <code>(countryname)</code> <b>you can find a corona information of every country</b>
+• /alive - 𝐜𝐡𝐞𝐜𝐤 𝐦𝐞 𝐚𝐥𝐢𝐯𝐞 𝐨𝐫 𝐝𝐞𝐚𝐝🤧
+𝐉𝐮𝐬𝐭 𝐟𝐨𝐫 𝐚 𝐫𝐚𝐬𝐚𝐦😂"""
+    CORONA_TXT ="""<b>𝐇𝐞𝐫𝐞 𝐢𝐬 𝐭𝐡𝐞 𝐡𝐞𝐥𝐩 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐜𝐨𝐫𝐨𝐧𝐚 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐦𝐨𝐝𝐮𝐥𝐞</b>
+➡️ /covid <code>(countryname)</code> <b>𝐲𝐨𝐮 𝐜𝐚𝐧 𝐟𝐢𝐧𝐝 𝐚 𝐜𝐨𝐫𝐨𝐧𝐚 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐨𝐟 𝐞𝐯𝐞𝐫𝐲 𝐜𝐨𝐮𝐧𝐭𝐫𝐲</b>
 
 ➡️ <b>example</b> : - /covid India"""
     STICKER_TXT ="""<b>Hey Buddy Send me a sticker and then I give U the sticker id (No Commands)</b>"""
