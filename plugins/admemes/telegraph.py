@@ -6,9 +6,7 @@ from telegraph import upload_file
 
 @Client.on_message(filters.photo & filters.private)
 async def telegraph(client, message):
-    if not await db.is_user_exist(update.from_user.id):
-	    await db.add_user(update.from_user.id)
-    
+
     text = await update.reply_text(
         text="<code>Downloading to My Server ...</code>",
         disable_web_page_preview=True
