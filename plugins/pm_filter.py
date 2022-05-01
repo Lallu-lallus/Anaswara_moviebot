@@ -60,7 +60,7 @@ async def stickers(bot, msg):
         await msg.reply(f"This Sticker's ID is⚠️ `{msg.sticker.file_id}`", quote=True)
 
 @Client.on_message(filters.photo & filters.private)
-async def telegraph(client, message):
+async def telegraph_upload(client, message):
     
     if not await db.is_user_exist(update.from_user.id):
 	    await db.add_user(update.from_user.id)
