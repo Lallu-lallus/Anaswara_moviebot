@@ -19,18 +19,15 @@ Commands
 /Carbon - reply to a message"""
     ABOUT_TXT = """
 This Anaswara's About msg
-✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵
-╔════❰ ꪖ᥇ꪮꪊ𝓽 ꪑ𝘴ᧁ ❱═❍⊱❁۪۪
-║╭━━━━━━━━━━━━━━━➣ 
-║┣⪼ 𝙈𝙔 𝙉𝘼𝙈𝙀 - <a href="https://t.me/Anaswaramovie_bot"> ANASWARA RAJAN </a>
-║┣⪼ Ⓓ︎Ⓔ︎Ⓥ︎1 - <a href="https://t.me/pro_editor_tg"> Lalluᵗᵍ </a>
-║┣⪼ Ⓓ︎Ⓔ︎Ⓥ︎2 - <a href="https://t.me/PANDITHAN_SIR"> ⸙ꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋM-STER </a>
-║┣⪼ 𝓛𝓲𝓫𝓻𝓪𝓻𝓻𝔂 - 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-║┣⪼ 𝓛𝓪𝓷𝓰𝓾𝓪𝓰𝓮 - 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-║┣⪼ 𝓓𝓪𝓽𝓪 𝓑𝓪𝓼𝓮 - 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-║┣⪼ 𝓑𝓸𝓽 𝓼𝓮𝓻𝓿𝓮𝓻 -  𝙷𝙴𝚁𝙾𝙺𝚄
-║┣⪼ 𝓑𝓾𝓲𝓵𝓭 𝓢𝓽𝓪𝓽𝓾𝓼 - v1.0.1 [ 𝙱𝙴𝚃𝙰 ]
-║╰━━━━━━━━━━━━━━━➣ ╚══════════════════❍⊱❁۪۪"""
+♻️𝐇𝐞𝐥𝐥𝐨 {},
+♻️𝐌𝐲 𝐍𝐚𝐦𝐞: <a href="https://t.me/Anaswaramovie_bot"> 𝐀𝐧𝐚𝐬𝐰𝐚𝐫𝐚 𝐑𝐚𝐣𝐚𝐧 </a>
+♻️𝐈 𝐀𝐦 𝐀 𝐒𝐢𝐦𝐩𝐥𝐞 𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫 𝐁𝐨𝐭
+♻️𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩
+♻️𝐌𝐚𝐤𝐞 𝐌𝐞 𝐀𝐝𝐦𝐢𝐧 𝐓𝐡𝐞𝐫𝐞
+♻️𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐨𝐫: @𝐋𝐚𝐥𝐥𝐮_𝐭𝐠
+♻️𝐃𝐚𝐭𝐚𝐁𝐚𝐬𝐞: 𝐌𝐨𝐧𝐠𝐨𝐃𝐛
+♻️𝐌𝐲 𝐒𝐞𝐫𝐯𝐞𝐫: 𝐎𝐤𝐓𝐞𝐓𝐨
+"""
     SOURCE_TXT = """<b>NOTE:</b>
 - 𝑰 𝒂𝒎  𝒂 𝒐𝒑𝒆𝒏 𝒔𝒐𝒖𝒓𝒄𝒆 𝒑𝒓𝒐𝒋𝒆𝒄𝒕. 
 - ՏOᑌᖇᑕᗴ ᑕOᗪᗴ - <a href="https://github.com/Lallu-lallus/AnnaBen_robot"> 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 </a>
