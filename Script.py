@@ -18,8 +18,7 @@ It is carbon creator
 Commands
 /Carbon - reply to a message"""
     ABOUT_TXT = """
-This Anaswara's About msg
-♻️𝐇𝐞𝐥𝐥𝐨 {},
+♻️𝐇𝐞𝐥𝐥𝐨 {}
 ♻️𝐌𝐲 𝐍𝐚𝐦𝐞: <a href="https://t.me/Anaswaramovie_bot"> 𝐀𝐧𝐚𝐬𝐰𝐚𝐫𝐚 𝐑𝐚𝐣𝐚𝐧 </a>
 ♻️𝐈 𝐀𝐦 𝐀 𝐒𝐢𝐦𝐩𝐥𝐞 𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫 𝐁𝐨𝐭
 ♻️𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩
