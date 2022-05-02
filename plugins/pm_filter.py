@@ -514,7 +514,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption
                     )
                 btn = [[
-                    InlineKeyboardButton("♻️DOWNLOAD♻️", callback_data='send_file')
+                    InlineKeyboardButton("♻️DOWNLOAD♻️", callback_data='send_file.link')
                     ],[
                     InlineKeyboardButton("🔰JOIN CHANNEL🔰", url='https://t.me/+mFIQaT9QxC1mMDI1')
                 ]]
