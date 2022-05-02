@@ -1052,8 +1052,18 @@ async def auto_filter(client, msg, spoll=False):
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
-                if SPELL_CHECK_REPLY:
-                    return await advantage_spell_chok(msg)
+                if SPELL_MODE:  
+                    reply = search.replace(" ", "+")
+                    reply_markup = InlineKeyboardMarkup([[
+                        InlineKeyboardButton("🔮IMDB🔮", url=f"https://imdb.com/find?q={reply}"),
+                        InlineKeyboardButton("🪐 Reason", callback_data="reason")
+                    ]])
+                    imdb=await get_poster(search)
+                    if imdb and imdb.get('poster'):
+                        await message.reply_photo(photo=imdb.get('poster'), caption=LuciferMoringstar.GET_MOVIE_7.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), short=imdb.get('short_info'), url=imdb['url']), reply_markup=reply_markup) 
+                        return
+                    else:
+                        return
                 else:
                     return
         else:
