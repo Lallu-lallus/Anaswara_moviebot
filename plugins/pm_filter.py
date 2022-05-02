@@ -4,6 +4,7 @@ import re
 import ast
 import pytz
 import datetime
+import os
 
 from telegraph import upload_file
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
@@ -29,6 +30,18 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 FILTER_MODE = {}
+SPELL_MODE = True
+
+SPELL_TXT = """Hey {mention}
+
+Couldn't find any results for {query}, Do you searched for this movie ?
+
+Title: {title}
+Genre: {genre}
+Year: {year}
+Rating: {rating}
+"""
+
 
 now = datetime.datetime.now()
 tz = pytz.timezone('asia/kolkata')
@@ -1060,7 +1073,7 @@ async def auto_filter(client, msg, spoll=False):
                     ]])
                     imdb=await get_poster(search)
                     if imdb and imdb.get('poster'):
-                        await message.reply_photo(photo=imdb.get('poster'), caption=LuciferMoringstar.GET_MOVIE_7.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), short=imdb.get('short_info'), url=imdb['url']), reply_markup=reply_markup) 
+                        await message.reply_photo(photo=imdb.get('poster'), caption=SPELL_TXT.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), short=imdb.get('short_info'), url=imdb['url']), reply_markup=reply_markup) 
                         return
                     else:
                         return
@@ -1156,7 +1169,7 @@ async def auto_filter(client, msg, spoll=False):
     if spoll:
         await msg.message.delete()
   
-if SPELL_MODE:  
+          if SPELL_MODE:  
                 reply = search.replace(" ", "+")
                 reply_markup = InlineKeyboardMarkup([[
                  InlineKeyboardButton("🔮IMDB🔮", url=f"https://imdb.com/find?q={reply}"),
