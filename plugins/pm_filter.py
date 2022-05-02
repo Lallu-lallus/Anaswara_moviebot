@@ -776,9 +776,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_message(
             text=script.REASON_TXT.format(query.from_user.mention),
-            chat_id=query.message.chat.id,
-            reply_markup=reply_markup,
             disable_web_page_preview=True,
+            reply_markup=reply_markup,
             parse_mode='html'
         )
     elif query.data == "stickerid":
