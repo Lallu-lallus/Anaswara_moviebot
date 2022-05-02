@@ -35,11 +35,13 @@ SPELL_MODE = True
 SPELL_TXT = """⭕Hey ||{mention}||
 
 ⭕Couldn't find any results for {query}, Do you searched for this movie ?
+⭕Check spelling 
+⭕Not OTT released
 
-⭕Title: {title}
-⭕Genre: {genres}
-⭕Year: {year}
-⭕Rating: {rating}
+♻️Title: {title}
+🎭Genre: {genres}
+📆Year: {year}
+🌟Rating: {rating}
 """
 
 
