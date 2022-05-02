@@ -38,6 +38,8 @@ SPELL_TXT = """⭕Hey ||{mention}||
 ⭕Check spelling 
 ⭕Not OTT released
 
+      🌟MOVIE DETAILS🌟
+
 ♻️Title: {title}
 🎭Genre: {genres}
 📆Year: {year}
