@@ -767,6 +767,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True,
             parse_mode='html'
         )
+    elif query.data == "reason":
+        buttons = [[
+            InlineKeyboardButton('𝐜𝐥𝐨𝐬𝐞', callback_data='close')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.send_message(
+            text=script.REASON_TXT.format(query.from_user.mention),
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup,
+            disable_web_page_preview=True,
+            parse_mode='html'
+        )
     elif query.data == "stickerid":
         await query.message.delete()
         buttons = [[
