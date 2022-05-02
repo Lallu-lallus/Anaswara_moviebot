@@ -1188,8 +1188,8 @@ async def auto_filter(client, msg, spoll=False):
             await del1.edit(f"⚙️ Filter For {search} Closed 🗑️")
     else:
         del2 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(600)
-            await del2.edit(f"⚙️ Filter For {search} Closed 🗑️")
+        await asyncio.sleep(600)
+        await del2.edit(f"⚙️ Filter For {search} Closed 🗑️")
     if spoll:
         await msg.message.delete()
       
