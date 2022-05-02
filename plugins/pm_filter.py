@@ -1086,7 +1086,10 @@ async def auto_filter(client, msg, spoll=False):
                     ]])
                     imdb=await get_poster(search)
                     if imdb and imdb.get('poster'):
-                        await message.reply_photo(photo=imdb.get('poster'), caption=SPELL_TXT.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), short=imdb.get('short_info'), url=imdb['url']), reply_markup=reply_markup) 
+                        del3 = await message.reply_photo(photo=imdb.get('poster'), caption=SPELL_TXT.format(mention=message.from_user.mention, query=search, title=imdb.get('title'), genres=imdb.get('genres'), year=imdb.get('year'), rating=imdb.get('rating'), short=imdb.get('short_info'), url=imdb['url']), reply_markup=reply_markup) 
+                        asyncio.sleep(600)
+                        del3.delete()
+                        message.delete()
                         return
                     else:
                         return
@@ -1169,16 +1172,28 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-            await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            dell = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            asyncio.sleep(600)
+            dell.delete()
+            message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            del = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            asyncio.sleep(600)
+            del.delete()
+            message.delete()
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            del1await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            asyncio.sleep(600)
+            del1.delete()
+            message.delete()
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        del2 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        asyncio.sleep(600)
+        del2.delete()
+        message.delete()
     if spoll:
         await msg.message.delete()
       
