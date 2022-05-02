@@ -1178,9 +1178,9 @@ async def auto_filter(client, msg, spoll=False):
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            del = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            delss = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(600)
-            await del.edit(f"⚙️ Filter For {search} Closed 🗑️")
+            await delss.edit(f"⚙️ Filter For {search} Closed 🗑️")
         except Exception as e:
             logger.exception(e)
             del1 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
