@@ -1173,27 +1173,23 @@ async def auto_filter(client, msg, spoll=False):
     if imdb and imdb.get('poster'):
         try:
             dell = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            asyncio.sleep(600)
-            dell.delete()
-            message.delete()
+            await asyncio.sleep(600)
+            await dell.edit(f"⚙️ Filter For {search} Closed 🗑️")
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             del = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            asyncio.sleep(600)
-            del.delete()
-            message.delete()
+            await asyncio.sleep(600)
+            await del.edit(f"⚙️ Filter For {search} Closed 🗑️")
         except Exception as e:
             logger.exception(e)
-            del1await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            asyncio.sleep(600)
-            del1.delete()
-            message.delete()
+            del1 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(600)
+            await del1.edit(f"⚙️ Filter For {search} Closed 🗑️")
     else:
         del2 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        asyncio.sleep(600)
-        del2.delete()
-        message.delete()
+         await asyncio.sleep(600)
+         await del2.edit(f"⚙️ Filter For {search} Closed 🗑️")
     if spoll:
         await msg.message.delete()
       
