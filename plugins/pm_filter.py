@@ -37,7 +37,7 @@ SPELL_TXT = """Hey {mention}
 Couldn't find any results for {query}, Do you searched for this movie ?
 
 Title: {title}
-Genre: {genre}
+Genre: {genres}
 Year: {year}
 Rating: {rating}
 """
