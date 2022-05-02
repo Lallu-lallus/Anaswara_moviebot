@@ -769,7 +769,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "reason":
         buttons = [[
-            InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/cml_links2)
+            InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/cml_links2')
             ],[
             InlineKeyboardButton('𝐜𝐥𝐨𝐬𝐞', callback_data='close')
         ]]
