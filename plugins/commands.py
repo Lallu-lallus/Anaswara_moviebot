@@ -137,7 +137,7 @@ async def start(client, message):
         caption=f_caption,
         )
                     
-@Client.on_message(filters.command('copy'))
+@Client.on_message(filters.command('copy') & ~filters.group)
 async def copy_msg(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
