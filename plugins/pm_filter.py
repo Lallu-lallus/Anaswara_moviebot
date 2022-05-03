@@ -123,52 +123,6 @@ async def telegraph_upload(client, message):
         )
     )    
 
-@Client.on_message(filters.command('copy'))
-async def copy_msg(client, message):
-    userid = message.from_user.id if message.from_user else None
-    if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
-    chat_type = message.chat.type
-
-    if chat_type == "private":
-        grpid = await active_connection(str(userid))
-        if grpid is not None:
-            grp_id = grpid
-            try:
-                chat = await client.get_chat(grpid)
-                title = chat.title
-            except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
-                return
-        else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
-            return
-
-    elif chat_type in ["group", "supergroup"]:
-        grp_id = message.chat.id
-        title = message.chat.title
-
-    else:
-        return
-
-    st = await client.get_chat_member(grp_id, userid)
-    if (
-            st.status != "administrator"
-            and st.status != "creator"
-            and str(userid) not in ADMINS
-    ):
-        return
-
-    if not message.reply_to_message:
-        await message.reply("Reply to any messsge to copy")
-        return
-    msg=message.reply_to_message
-    try:
-        await msg.copy(grp_id)
-        await message.reply("Message Copied to your group Successfully")
-    except Exception as e:
-        print(e)
-
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message):
       mode_on = ["yes", "on", "true"]
