@@ -541,7 +541,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🐭𝐇𝐞𝐥𝐩🐭', callback_data='help'),
             InlineKeyboardButton('🐭𝐒𝐞𝐚𝐫𝐜𝐡🐭', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('🐱𝐀𝐛𝐨𝐮𝐭'🐱, callback_data='about')
+            InlineKeyboardButton('🐱𝐀𝐛𝐨𝐮𝐭🐱', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(
@@ -616,12 +616,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         await query.message.delete()
         buttons= [[
-            InlineKeyboardButton('𝐌𝐚𝐧𝐮𝐞𝐥 𝐅𝐢𝐥𝐭𝐞𝐫', callback_data= 'manualfilter'),
-            InlineKeyboardButton('𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫', callback_data= 'autofilter')
+            InlineKeyboardButton('🐱𝐌𝐚𝐧𝐮𝐞𝐥 𝐅𝐢𝐥𝐭𝐞𝐫🐱', callback_data= 'manualfilter'),
+            InlineKeyboardButton('🐱𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫🐱', callback_data= 'autofilter')
             ],[
-            InlineKeyboardButton('𝐇𝐞𝐥𝐩 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬', callback_data= 'func')
+            InlineKeyboardButton('🐭𝐇𝐞𝐥𝐩 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬🐭', callback_data= 'func')
             ],[
-            InlineKeyboardButton('𝐁𝐚𝐜𝐤', callback_data= 'start')
+            InlineKeyboardButton('🐶𝐁𝐚𝐜🐶', callback_data= 'start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(
@@ -633,11 +633,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         await query.message.delete()
         buttons= [[
-            InlineKeyboardButton('𝐬𝐭𝐚𝐭𝐮𝐬', callback_data='stats'),
-            InlineKeyboardButton('𝐬𝐨𝐮𝐫𝐜𝐞', callback_data='source')
+            InlineKeyboardButton('🐱𝐬𝐭𝐚𝐭𝐮𝐬🐱', callback_data='stats'),
+            InlineKeyboardButton('🐱𝐬𝐨𝐮𝐫𝐜𝐞🐱', callback_data='source')
             ],[
-            InlineKeyboardButton('𝐁𝐚𝐜𝐤', callback_data='start'),
-            InlineKeyboardButton('𝐂𝐥𝐨𝐬𝐞', callback_data='close_data')
+            InlineKeyboardButton('🐭𝐁𝐚𝐜🐭', callback_data='start'),
+            InlineKeyboardButton('🐭𝐂𝐥𝐨𝐬𝐞🐭', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_message(
