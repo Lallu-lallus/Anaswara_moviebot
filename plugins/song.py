@@ -17,7 +17,7 @@ from yt_dlp import YoutubeDL
 from info import COMMAND_HAND_LER
 
 
-@Client.on_message(filters.command(["song", "music"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["song", "music"], prefixes=f"{COMMAND_HAND_LER}"))
 async def song(client, message: Message):
     urlissed = get_text(message)
     if not urlissed:
@@ -231,7 +231,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(filters.command(["vsong", "video"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["vsong", "video"], prefixes=f"{COMMAND_HAND_LER}"))
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
