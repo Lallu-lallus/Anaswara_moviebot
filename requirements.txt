@@ -40,3 +40,4 @@ spamwatch
 NumPy
 python-dotenv
 py-tgcalls
+pytgcalls
