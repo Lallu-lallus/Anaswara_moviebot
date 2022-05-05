@@ -13,3 +13,7 @@ API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
 SESSION = os.getenv("SESSION")
 HNDLR = os.getenv("HNDLR", "/")
+
+
+bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="EvaMaria"))
+call_py = PyTgCalls(bot)
