@@ -38,3 +38,4 @@ cachetools
 pyyaml==6.0; python_version >= "3.6"
 spamwatch
 NumPy
+python-dotenv
