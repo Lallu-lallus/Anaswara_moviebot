@@ -5,7 +5,7 @@ from plugins.helper_functions.cust_p_filters import f_onw_fliter
 
 
 # EMOJI CONSTANTS
-BREAK_YOUR_LOVE = "💔"
+BREAK_YOUR_LOVE = "🧐"
 # EMOJI CONSTANTS
 
 @Client.on_message(
