@@ -60,7 +60,7 @@ elif 15 <= hour <20:
 else:
     lallus = 'Gᴏᴏᴅ ɴɪɢʜᴛ'
 
-@Client.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
+@Client.on_message(filters.group & filters.text & filters.private & ~filters.edited & filters.incoming)
 async def give_filter(client,message):
     k = await manual_filters(client, message)
     if k == False:
