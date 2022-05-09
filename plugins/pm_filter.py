@@ -123,6 +123,29 @@ async def telegraph_upload(client, message):
         )
     )    
 
+@Client.on_message(pyrogram.filters.command(["scaption"]))
+async def set_caption(bot, update):
+    if len(update.command) == 1:
+        await update.reply_text(
+            "Custom Caption \n\n you can use this command to set your own caption  \n\n Usage : /scaption Your caption text \n\n note : For current file name use : <code>{filename}</code>", 
+            quote = True, 
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('Show Current Caption', callback_data = "shw_caption")      
+                ],
+                [
+                    InlineKeyboardButton('Delete Caption', callback_data = "d_caption")
+                ]
+            ]
+        ) 
+        )
+    else:
+        command, CSTM_FIL_CPTN = update.text.split(' ', 1)
+        await update_cap(update.from_user.id, CSTM_FIL_CPTN)
+        await update.reply_text(f"**--Your Caption--:**\n\n{CSTM_FIL_CPTN}", quote=True)
+
+
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message):
       mode_on = ["yes", "on", "true"]
