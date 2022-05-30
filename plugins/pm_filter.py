@@ -32,13 +32,13 @@ SPELL_CHECK = {}
 FILTER_MODE = {}
 SPELL_MODE = True
 
-SPELL_TXT = """⭕Hey ||{mention}||
+SPELL_TXT = """◉Hey ||{mention}||
 
-⭕Couldn't find any results for {query}, Do you searched for this movie ?
-⭕Check spelling 
-⭕Not OTT released
+◉Couldn't find any results for {query}, Do you searched for this movie ?
+◉Check spelling 
+◉Not OTT released
 
-      🌟MOVIE DETAILS🌟
+      ｡◕MOVIE DETAILS◕｡
 
 ♻️Title: {title}
 🎭Genre: {genres}
@@ -559,12 +559,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         await query.message.delete()
         buttons = [[
-            InlineKeyboardButton('🐱𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐔𝐫 𝐆𝐫𝐩🐱', url='https://t.me/anaswaramovie_bot?startgroup=true')
+            InlineKeyboardButton('𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐔𝐫 𝐆𝐫𝐩', url='https://t.me/anaswaramovie_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('🐭𝐇𝐞𝐥𝐩🐭', callback_data='help'),
-            InlineKeyboardButton('🐭𝐒𝐞𝐚𝐫𝐜𝐡🐭', switch_inline_query_current_chat='')
+            InlineKeyboardButton('𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton('𝐒𝐞𝐚𝐫𝐜𝐡', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('🐱𝐀𝐛𝐨𝐮𝐭🐱', callback_data='about')
+            InlineKeyboardButton('𝐀𝐛𝐨𝐮𝐭', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(
@@ -582,7 +582,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('  🐱ɢᴛʀᴀɴs🐱  ', callback_data='gtrans'),
             InlineKeyboardButton('  🐭ɪɴғᴏ🐭  ', callback_data='info'),
-            InlineKeyboardButton('  ᴘᴀsᴛᴇ  ', callback_data='paste')
+            InlineKeyboardButton('  🐶ᴘᴀsᴛᴇ🐶  ', callback_data='paste')
             ],[
             InlineKeyboardButton(' ☜𝘽𝙖𝙘𝙠 ', callback_data='help'),
             InlineKeyboardButton(' 🦄ғᴏɴᴛ🦄', callback_data='font'),
@@ -639,12 +639,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         await query.message.delete()
         buttons= [[
-            InlineKeyboardButton('🐱𝐌𝐚𝐧𝐮𝐞𝐥 𝐅𝐢𝐥𝐭𝐞𝐫🐱', callback_data= 'manualfilter'),
-            InlineKeyboardButton('🐱𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫🐱', callback_data= 'autofilter')
+            InlineKeyboardButton('𝐌𝐚𝐧𝐮𝐞𝐥 𝐅𝐢𝐥𝐭𝐞𝐫', callback_data= 'manualfilter'),
+            InlineKeyboardButton('𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫', callback_data= 'autofilter')
             ],[
-            InlineKeyboardButton('🐭𝐇𝐞𝐥𝐩 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬🐭', callback_data= 'func')
+            InlineKeyboardButton('𝐇𝐞𝐥𝐩 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬', callback_data= 'func')
             ],[
-            InlineKeyboardButton('🐶𝐁𝐚𝐜🐶', callback_data= 'start')
+            InlineKeyboardButton('𝐁𝐚𝐜k', callback_data= 'start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(
@@ -656,11 +656,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         await query.message.delete()
         buttons= [[
-            InlineKeyboardButton('🐱𝐬𝐭𝐚𝐭𝐮𝐬🐱', callback_data='stats'),
-            InlineKeyboardButton('🐱𝐬𝐨𝐮𝐫𝐜𝐞🐱', callback_data='source')
+            InlineKeyboardButton('𝐬𝐭𝐚𝐭𝐮𝐬', callback_data='stats'),
+            InlineKeyboardButton('𝐬𝐨𝐮𝐫𝐜𝐞', callback_data='source')
             ],[
-            InlineKeyboardButton('🐭𝐁𝐚𝐜🐭', callback_data='start'),
-            InlineKeyboardButton('🐭𝐂𝐥𝐨𝐬𝐞🐭', callback_data='close_data')
+            InlineKeyboardButton('𝐁𝐚𝐜', callback_data='start'),
+            InlineKeyboardButton('𝐂𝐥𝐨𝐬𝐞', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_message(
