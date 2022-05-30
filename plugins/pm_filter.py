@@ -32,7 +32,7 @@ SPELL_CHECK = {}
 FILTER_MODE = {}
 SPELL_MODE = True
 
-SPELL_TXT = """◉Hey {mention}p
+SPELL_TXT = """◉Hey {mention}
 
 ◉Couldn't find any results for {query}, Do you searched for this movie ?
 ◉Check spelling 
