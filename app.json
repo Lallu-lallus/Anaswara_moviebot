@@ -77,7 +77,7 @@
         "IMDB_TEMPLATE":{
             "description": "IMDb template. Get movie details"
             "value": ""
-            "required": True
+            "required": true
         },
         "DATABASE_URI": {
             "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
