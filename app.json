@@ -75,7 +75,7 @@
             "required": false
         },
         "IMDB_TEMPLATE":{
-            "description": "IMDb template. Get movie details
+            "description": "IMDb template. Get movie details"
             "value": ""
             "required": True
         },
