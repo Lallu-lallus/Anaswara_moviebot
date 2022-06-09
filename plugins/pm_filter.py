@@ -32,18 +32,17 @@ SPELL_CHECK = {}
 FILTER_MODE = {}
 SPELL_MODE = True
 
-SPELL_TXT = """◉Hey {mention}
-
-◉Couldn't find any results for {query}, Do you searched for this movie ?
-◉Check spelling 
-◉Not OTT released
+SPELL_TXT = """◉𝑯𝒆𝒚 {mention}
+➼ 𝑪𝒐𝒖𝒍𝒅𝒏'𝒕 𝒇𝒊𝒏𝒅 𝒂𝒏𝒚 𝒓𝒆𝒔𝒖𝒍𝒕𝒔 𝒇𝒐𝒓 {query}, 𝑫𝒐 𝒚𝒐𝒖 𝒔𝒆𝒂𝒓𝒄𝒉𝒆𝒅 𝒇𝒐𝒓 𝒕𝒉𝒊𝒔 𝒎𝒐𝒗𝒊𝒆 ?
+➼ 𝑪𝒉𝒆𝒄𝒌 𝒔𝒑𝒆𝒍𝒍𝒊𝒏𝒈 
+➼ 𝑵𝒐𝒕 𝑶𝑻𝑻 𝒓𝒆𝒍𝒆𝒂𝒔𝒆𝒅
 
       ｡◕MOVIE DETAILS◕｡
 
-♻️Title: {title}
-🎭Genre: {genres}
-📆Year: {year}
-🌟Rating: {rating}
+➣ Title: {title}
+➣ Genre: {genres}
+➣ Year: {year}
+➣ Rating: {rating}
 """
 
 
