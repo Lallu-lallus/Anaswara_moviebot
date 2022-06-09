@@ -43,6 +43,7 @@ SPELL_TXT = """➼ 𝑯𝒆𝒚 {mention}
 ➣ Genre: {genres}
 ➣ Year: {year}
 ➣ Rating: {rating}
+➣ Info: {short_info}
 """
 
 
